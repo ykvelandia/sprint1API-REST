@@ -1,11 +1,12 @@
-package com.sprintAPIREST.sprint1APIREST.repository;
+package com.sprintAPIREST.sprint1APIREST.repository.hashmaprepository;
 
 import com.sprintAPIREST.sprint1APIREST.model.User;
+import com.sprintAPIREST.sprint1APIREST.repository.UserRepository;
 import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
 @Repository
-public class UserImplementsRepository implements UserRepository {
+public class UserHashmapImplementsRepository implements UserRepository {
     //Instancia de HashMap
     private HashMap<String,User> userHashMap = new HashMap<>();
 
@@ -17,6 +18,11 @@ public class UserImplementsRepository implements UserRepository {
     @Override
     public User findUserByDocument(String document) {
         return userHashMap.get(document);
+    }
+
+    @Override
+    public User findUsersById(Integer id) {
+        return userHashMap.get(id);
     }
 
     @Override
