@@ -5,11 +5,13 @@ public class User {
     private String name;
     private String document;
     private String contacNumber;
+    private Integer id;
 
-    public User(String name, String document, String contacNumber) {
+    public User(String name, String document, String contacNumber,Integer id) {
         this.name = name;
         this.document = document;
         this.contacNumber = contacNumber;
+        this.id = id;
     }
 
     public String getName() {
@@ -34,5 +36,13 @@ public class User {
 
     public void setContacNumber(String contacNumber) {
         this.contacNumber = contacNumber;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 }

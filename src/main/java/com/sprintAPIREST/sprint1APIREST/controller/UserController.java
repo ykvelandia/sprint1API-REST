@@ -25,6 +25,10 @@ public class UserController {
     public User findUserByDocument(@PathVariable("document")String document) {
         return userService.findUserByDocument(document);
     }
+    @GetMapping("/{id}")
+    public User findUserById(@PathVariable("id")String document) {
+        return userService.findUserByDocument(document);
+    }
 
     @PostMapping
     public User createUser(@RequestBody User user) {
@@ -36,9 +40,7 @@ public class UserController {
         return userService.updateUser(document,user);
     }
 
-    @DeleteMapping
-    public User deleteUser(@PathVariable String document) {
-        return userService.deleteUser(document);
-    }
+
+
 
 }
